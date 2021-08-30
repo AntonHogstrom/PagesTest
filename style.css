@@ -1,0 +1,67 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" );
+
+:root {
+    --primary-background: rgb(149, 149, 149);
+    --secondary-background: rgb(49, 49, 49);
+    --primary-text-color: rgb(41, 41, 41);
+    --secondary-text-color: rgb(197, 197, 197);
+    --header-height: 250px;
+    --footer-height: 50px;
+}
+li {
+    list-style: none;
+}
+body {
+    max-width: 1200px;
+    margin: auto;
+}
+header {
+    background-color: var(--secondary-background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: var(--header-height);
+}
+main {
+    background-color: var(--primary-background);
+    color: var(--primary-text-color);
+    /*screen-height minus header minus footer minus up and down padding of main*/
+    min-height: calc(100vh - var(--header-height) - var(--footer-height) - 8px - 8vh);
+    margin: 0;
+    padding: calc(4px + 4vh) calc(4px + 4vw);
+}
+.github_left {
+    width: 300px;
+}
+.github_right {
+    width: 80px;
+}
+header img {
+    width: 100%;
+}
+footer {
+    background-color: var(--secondary-background);
+    color: var(--secondary-text-color);
+    min-height: var(--footer-height);
+    font-size: 20px;
+    display: grid;
+}
+footer ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+}
+
+iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+}
+
+
+
+@media all and (max-width: 650px) {
+    footer li {
+        flex-basis: 100%;
+    }
+}
